@@ -7,9 +7,10 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.logic.commands.RemarkCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.person.Remark;
 
 public class RemarkCommandParser implements Parser<RemarkCommand> {
-    private static final Prefix PREFIX_REMARK = new Prefix("r/");
+    public static final Prefix PREFIX_REMARK = new Prefix("r/");
 
     public RemarkCommand parse(String args) throws ParseException {
     requireNonNull(args);
@@ -19,12 +20,13 @@ public class RemarkCommandParser implements Parser<RemarkCommand> {
     Index index;
     try {
         index = ParserUtil.parseIndex(argMultimap.getPreamble());
+        System.out.println(index);
     } catch (IllegalValueException ive) {
         throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT,
             RemarkCommand.MESSAGE_USAGE), ive);
     }
 
-    String remark = argMultimap.getValue(PREFIX_REMARK).orElse("");
+    Remark remark = new Remark(argMultimap.getValue(PREFIX_REMARK).orElse(""));
 
     return new RemarkCommand(index, remark);
 }
