@@ -117,6 +117,7 @@
       "headings": {
         "eventy-user-guide": "Eventy User Guide",
         "quick-start": "Quick start",
+        "ui-layout-description": "UI Layout Description",
         "features": "Features",
         "creating-an-event-addev": "Creating an event: addev",
         "editing-an-event-editev": "Editing an event: editev",
@@ -132,10 +133,10 @@
         "viewing-help-help": "Viewing help : help",
         "listing-all-persons-list": "Listing all persons : list",
         "exiting-the-program-exit": "Exiting the program : exit",
-        "format-exit": "Format: exit",
         "faq": "FAQ",
         "known-issues": "Known issues",
-        "command-summary": "Command summary"
+        "command-summary": "Command summary",
+        "prefix-translation-table": "Prefix translation table"
       },
       "headingKeywords": {}
     },
